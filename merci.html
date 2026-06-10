@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Merci — Maison Beauty Shehrazade</title>
+  <link rel="icon" href="logo.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Raleway', sans-serif;
+      background: linear-gradient(160deg, #fdf8f0 0%, #f0dfc0 100%);
+      min-height: 100vh;
+      display: flex; align-items: center; justify-content: center;
+      padding: 20px; color: #3d2b10;
+    }
+    .card {
+      background: #ffffff;
+      border-radius: 28px; padding: 56px 48px;
+      max-width: 480px; width: 100%; text-align: center;
+      border: 1px solid rgba(201,168,76,.28);
+      box-shadow: 0 12px 60px rgba(201,168,76,.22);
+      animation: pop .55s cubic-bezier(.175,.885,.32,1.275) both;
+    }
+    @keyframes pop {
+      from { transform: scale(.88); opacity: 0; }
+      to   { transform: scale(1);   opacity: 1; }
+    }
+    .logo-wrap { margin-bottom: 28px; }
+    .logo-wrap img { width: 110px; height: 110px; border-radius: 50%; object-fit: cover;
+      border: 2px solid rgba(201,168,76,.3);
+      filter: drop-shadow(0 6px 24px rgba(201,168,76,.3)); }
+
+    .ornament {
+      display: flex; align-items: center; gap: 14px;
+      margin: 0 auto 28px; max-width: 240px;
+    }
+    .ornament-line { flex: 1; height: 1px; background: linear-gradient(90deg, transparent, #c9a84c, transparent); }
+    .ornament-diamond { width: 8px; height: 8px; background: #c9a84c; transform: rotate(45deg); flex-shrink: 0; }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem; font-weight: 700; color: #3d2b10; margin-bottom: 10px;
+    }
+    h1 em { font-style: italic; color: #a07828; display: block; font-size: 1.5rem; margin-top: 4px; }
+
+    .sub {
+      font-size: .97rem; color: #8a6f4a; margin-bottom: 30px; line-height: 1.85;
+    }
+    .sub strong { color: #a07828; font-weight: 700; }
+
+    .steps-box {
+      background: linear-gradient(160deg, #fdf8f0, #f8eedb);
+      border: 1px solid rgba(201,168,76,.25);
+      border-radius: 16px; padding: 22px 24px;
+      text-align: right; margin-bottom: 24px;
+    }
+    .steps-box h3 {
+      font-size: .78rem; font-weight: 700; color: #a07828;
+      letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 16px;
+      text-align: center;
+    }
+    .step-row {
+      display: flex; align-items: flex-start; gap: 12px;
+      margin-bottom: 12px; font-size: .9rem; color: #8a6f4a;
+    }
+    .step-row:last-child { margin-bottom: 0; }
+    .step-dot {
+      width: 24px; height: 24px; border-radius: 50%;
+      background: linear-gradient(135deg, #a07828, #d4b55e);
+      color: #fff; font-size: .72rem; font-weight: 700;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+
+    .notice {
+      background: rgba(201,168,76,.08);
+      border: 1px solid rgba(201,168,76,.2);
+      border-radius: 12px; padding: 16px 18px;
+      font-size: .9rem; color: #8a6f4a; margin-bottom: 24px; line-height: 1.7;
+    }
+    .notice strong { color: #a07828; display: block; margin-bottom: 4px; font-weight: 700; }
+
+    .back-btn {
+      display: inline-block;
+      background: linear-gradient(135deg, #a07828, #d4b55e);
+      color: #fff; font-family: 'Raleway', sans-serif;
+      font-size: .9rem; font-weight: 700; text-decoration: none;
+      border-radius: 50px; padding: 13px 32px;
+      box-shadow: 0 6px 24px rgba(201,168,76,.35);
+      transition: opacity .2s, transform .15s;
+    }
+    .back-btn:hover { opacity: .9; transform: translateY(-2px); }
+    .footer-note {
+      margin-top: 20px; font-size: .75rem; color: #b8986a; opacity: .7;
+    }
+  </style>
+</head>
+<body>
+<div class="card">
+
+  <div class="logo-wrap">
+    <img src="logo.png" alt="Maison Beauty Shehrazade" />
+  </div>
+
+  <div class="ornament">
+    <div class="ornament-line"></div>
+    <div class="ornament-diamond"></div>
+    <div class="ornament-line"></div>
+  </div>
+
+  <h1>
+    Merci pour votre
+    <em>Confiance ✨</em>
+  </h1>
+
+  <p class="sub">
+    Votre demande a bien été reçue par l'équipe de
+    <strong>Maison Beauty Shehrazade</strong>.<br>
+    Nous vous contacterons très prochainement pour confirmer votre rendez-vous.
+  </p>
+
+  <div class="steps-box">
+    <h3>✦ Ce qui se passe maintenant</h3>
+    <div class="step-row">
+      <span class="step-dot">1</span>
+      <span>Notre équipe a reçu votre demande et va la traiter</span>
+    </div>
+    <div class="step-row">
+      <span class="step-dot">2</span>
+      <span>Vous recevrez un message WhatsApp pour confirmer votre créneau</span>
+    </div>
+    <div class="step-row">
+      <span class="step-dot">3</span>
+      <span>Il ne vous reste plus qu'à vous préparer pour votre moment de beauté !</span>
+    </div>
+  </div>
+
+  <div class="notice">
+    <strong>📞 Réponse sous 2 heures</strong>
+    Notre équipe vous contacte rapidement — assurez-vous que votre téléphone est disponible 💛
+  </div>
+
+  <a class="back-btn" href="/shehrazade/">← Retour à l'accueil</a>
+
+  <p class="footer-note">Maison Beauty Shehrazade — Maroc 🇲🇦</p>
+</div>
+</body>
+</html>
