@@ -1,11 +1,10 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
-  
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Maison Beauty Shehrazade — صالون التجميل | المغرب</title>
-  <meta name="description" content="Maison Beauty Shehrazade — صالون تجميل نسائي احترافي في المغرب. كوافور، بروتين الشعر، عناية بالبشرة، مكياج، أظافر وحمام مغربي. احجزي موعدك الآن!" />
+  <meta name="description" content="Maison Beauty Shehrazade — تحولي إلى أميرة من أول جلسة. كوافور، بروتين الشعر، عناية بالبشرة، مكياج، أظافر وحمام مغربي. احجزي موعدك الآن!" />
   <link rel="icon" href="logo.png" type="image/png" />
 
   <!-- Meta Pixel -->
@@ -29,62 +28,66 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --crimson:      #8b0020;
-      --crimson-mid:  #b0002a;
-      --pink:         #e91e6c;
-      --pink-soft:    rgba(233,30,108,.10);
-      --pink-border:  rgba(233,30,108,.22);
+      --cream:        #faf3e8;
+      --cream2:       #f3e8d4;
       --gold:         #c9922b;
-      --gold-light:   #f0c060;
+      --gold-light:   #e8c472;
+      --gold-deep:    #a07020;
       --gold-soft:    rgba(201,146,43,.12);
-      --bg:           #fff5f7;
-      --surface:      #ffffff;
-      --surface2:     #fdf0f4;
-      --text:         #1a0510;
-      --muted:        #7c3050;
+      --gold-border:  rgba(201,146,43,.28);
+      --pink:         #e91e6c;
+      --pink-soft:    rgba(233,30,108,.08);
+      --pink-border:  rgba(233,30,108,.22);
+      --deep:         #2a1208;
+      --muted:        #7a5240;
+      --surface:      #fffef9;
+      --surface2:     #f8f0e3;
       --green:        #25D366;
-      --grad:         linear-gradient(135deg, #e91e6c 0%, #8b0020 100%);
-      --grad-soft:    linear-gradient(135deg, #fce4ec 0%, #f8bbd0 60%, #fdf0f4 100%);
-      --shadow:       0 4px 24px rgba(139,0,32,.13);
-      --shadow-lg:    0 8px 48px rgba(139,0,32,.18);
+      --grad:         linear-gradient(135deg, #e91e6c 0%, #c9922b 100%);
+      --grad-gold:    linear-gradient(135deg, #a07020 0%, #e8c472 100%);
+      --grad-soft:    linear-gradient(160deg, #faf3e8 0%, #fdf6eb 100%);
+      --shadow:       0 4px 24px rgba(201,146,43,.16);
+      --shadow-lg:    0 8px 48px rgba(201,146,43,.22);
+      --nav-bg:       #1a0c04;
     }
 
     html { scroll-behavior: smooth; }
     body {
       font-family: 'Cairo', sans-serif;
-      background: var(--bg);
-      color: var(--text);
+      background: var(--cream);
+      color: var(--deep);
       line-height: 1.7;
       overflow-x: hidden;
     }
 
     ::-webkit-scrollbar { width: 5px; }
-    ::-webkit-scrollbar-track { background: #fce4ec; }
-    ::-webkit-scrollbar-thumb { background: var(--pink); border-radius: 3px; }
+    ::-webkit-scrollbar-track { background: var(--cream2); }
+    ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 3px; }
 
     /* ── NAV ── */
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      background: rgba(139,0,32,.97);
+      background: var(--nav-bg);
       backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
       padding: 0 32px; height: 64px;
       display: flex; align-items: center; justify-content: space-between;
-      box-shadow: 0 2px 24px rgba(139,0,32,.4);
+      box-shadow: 0 2px 24px rgba(0,0,0,.35);
+      border-bottom: 1px solid rgba(201,146,43,.2);
     }
     .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
     .nav-logo img { width: 42px; height: 42px; border-radius: 50%; object-fit: cover; border: 2px solid var(--gold); }
     .nav-logo-text { font-size: 1.05rem; font-weight: 900; line-height: 1.15; }
     .nav-logo-text .t1 { color: #fff; }
-    .nav-logo-text .t2 { color: var(--gold); display: block; font-size: .82rem; }
+    .nav-logo-text .t2 { color: var(--gold-light); display: block; font-size: .82rem; }
     .nav-cta {
-      background: var(--gold); color: var(--crimson);
+      background: var(--grad); color: #fff;
       border: none; border-radius: 50px; padding: 9px 22px;
       font-family: 'Cairo', sans-serif; font-size: .9rem; font-weight: 900;
       cursor: pointer; text-decoration: none;
-      transition: background .2s, transform .15s; white-space: nowrap;
-      box-shadow: 0 4px 16px rgba(201,146,43,.4);
+      transition: opacity .2s, transform .15s; white-space: nowrap;
+      box-shadow: 0 4px 16px rgba(233,30,108,.35);
     }
-    .nav-cta:hover { background: var(--gold-light); transform: translateY(-1px); }
+    .nav-cta:hover { opacity: .9; transform: translateY(-1px); }
 
     /* ── HERO ── */
     .hero {
@@ -97,13 +100,13 @@
     .hero::before {
       content: '';
       position: absolute; width: 600px; height: 600px; border-radius: 50%;
-      background: radial-gradient(circle, rgba(233,30,108,.10) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(233,30,108,.07) 0%, transparent 70%);
       top: -150px; right: -100px; pointer-events: none;
     }
     .hero::after {
       content: '';
       position: absolute; width: 400px; height: 400px; border-radius: 50%;
-      background: radial-gradient(circle, rgba(201,146,43,.09) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(201,146,43,.10) 0%, transparent 70%);
       bottom: -80px; left: 8%; pointer-events: none;
     }
 
@@ -113,13 +116,12 @@
       position: relative; z-index: 1;
     }
 
-    /* text side */
     .hero-text { flex: 1 1 480px; }
 
     .badge {
       display: inline-flex; align-items: center; gap: 7px;
-      background: rgba(139,0,32,.08); border: 1.5px solid rgba(233,30,108,.25);
-      color: var(--crimson-mid); border-radius: 50px;
+      background: rgba(201,146,43,.1); border: 1.5px solid var(--gold-border);
+      color: var(--gold-deep); border-radius: 50px;
       padding: 6px 16px; font-size: .82rem; font-weight: 700; margin-bottom: 22px;
     }
     .badge-dot {
@@ -130,7 +132,7 @@
 
     h1 {
       font-size: clamp(2rem, 4.5vw, 3.2rem);
-      font-weight: 900; line-height: 1.22; color: var(--crimson); margin-bottom: 18px;
+      font-weight: 900; line-height: 1.22; color: var(--deep); margin-bottom: 18px;
     }
     h1 .accent { color: var(--pink); }
     h1 .gold   { color: var(--gold); }
@@ -140,16 +142,26 @@
       max-width: 440px; margin-bottom: 28px; line-height: 1.85;
     }
 
-    .motivation-box {
-      background: var(--surface);
-      border: 1.5px solid var(--pink-border);
-      border-radius: 14px; padding: 16px 20px;
-      display: flex; align-items: flex-start; gap: 12px;
-      box-shadow: var(--shadow); max-width: 480px;
+    .trust-strip {
+      display: flex; align-items: center; gap: 20px; flex-wrap: wrap;
+      margin-bottom: 24px;
     }
-    .motivation-box .icon { font-size: 1.7rem; flex-shrink: 0; }
-    .motivation-box p { font-size: .95rem; color: var(--muted); line-height: 1.7; }
-    .motivation-box p strong { color: var(--crimson); }
+    .trust-item {
+      display: flex; align-items: center; gap: 6px;
+      font-size: .88rem; font-weight: 700; color: var(--muted);
+    }
+    .trust-item strong { color: var(--gold-deep); }
+
+    .guarantee-mini {
+      background: var(--surface);
+      border: 1.5px solid var(--gold-border);
+      border-radius: 14px; padding: 14px 18px;
+      display: flex; align-items: flex-start; gap: 12px;
+      box-shadow: var(--shadow); max-width: 460px;
+    }
+    .guarantee-mini .icon { font-size: 1.7rem; flex-shrink: 0; }
+    .guarantee-mini p { font-size: .92rem; color: var(--muted); line-height: 1.65; }
+    .guarantee-mini p strong { color: var(--gold-deep); }
 
     /* form side */
     .hero-form-col { flex: 0 0 380px; }
@@ -157,46 +169,52 @@
     .form-card {
       background: var(--surface); border-radius: 20px;
       box-shadow: var(--shadow-lg); overflow: hidden;
-      border: 1px solid var(--pink-border);
+      border: 1.5px solid var(--gold-border);
     }
     .form-card-top {
-      background: var(--grad); padding: 20px 24px; text-align: center;
+      background: var(--grad); padding: 18px 24px; text-align: center;
     }
-    .form-card-top h2 { color: #fff; font-size: 1.2rem; font-weight: 900; line-height: 1.3; }
-    .form-card-top p  { color: rgba(255,255,255,.85); font-size: .85rem; margin-top: 4px; }
-    .form-card-body   { padding: 24px; }
+    .form-card-top h2 { color: #fff; font-size: 1.15rem; font-weight: 900; line-height: 1.3; }
+    .form-card-top p  { color: rgba(255,255,255,.88); font-size: .83rem; margin-top: 4px; }
+    .scarcity-bar {
+      background: rgba(0,0,0,.18); padding: 8px 24px;
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+    }
+    .scarcity-bar span { color: #fff; font-size: .8rem; font-weight: 700; }
+    .scarcity-dot { width: 8px; height: 8px; border-radius: 50%; background: #ffd700; animation: blink 1.4s infinite; flex-shrink: 0; }
+    .form-card-body   { padding: 22px; }
 
     .field { margin-bottom: 16px; }
     .field label {
       display: block; font-size: .85rem; font-weight: 700;
-      color: var(--crimson); margin-bottom: 6px;
+      color: var(--gold-deep); margin-bottom: 6px;
     }
     .field input, .field select {
-      width: 100%; border: 1.5px solid var(--pink-border);
+      width: 100%; border: 1.5px solid var(--gold-border);
       border-radius: 10px; padding: 12px 14px;
       font-family: 'Cairo', sans-serif; font-size: 16px;
-      color: var(--text); background: var(--surface2); outline: none;
+      color: var(--deep); background: var(--cream); outline: none;
       transition: border-color .2s, box-shadow .2s;
       appearance: none; -webkit-appearance: none;
     }
     .field input:focus, .field select:focus {
       border-color: var(--pink);
-      box-shadow: 0 0 0 3px rgba(233,30,108,.12);
+      box-shadow: 0 0 0 3px rgba(233,30,108,.1);
     }
-    .field input::placeholder { color: #c4a3b0; }
-    .field select option { background: #fff; color: var(--text); }
+    .field input::placeholder { color: #b8986a; }
+    .field select option { background: #fff; color: var(--deep); }
     .select-wrap { position: relative; }
     .select-wrap::after {
       content: '▾'; position: absolute; left: 14px; top: 50%;
-      transform: translateY(-50%); color: var(--pink); pointer-events: none;
+      transform: translateY(-50%); color: var(--gold); pointer-events: none;
     }
 
     .submit-btn {
       width: 100%; background: var(--grad); color: #fff; border: none;
-      border-radius: 50px; padding: 14px 24px;
-      font-family: 'Cairo', sans-serif; font-size: 1.05rem; font-weight: 900;
+      border-radius: 50px; padding: 15px 24px;
+      font-family: 'Cairo', sans-serif; font-size: 1.08rem; font-weight: 900;
       cursor: pointer; transition: opacity .2s, transform .15s;
-      box-shadow: 0 5px 24px rgba(139,0,32,.35); letter-spacing: .3px;
+      box-shadow: 0 5px 24px rgba(233,30,108,.35); letter-spacing: .3px;
     }
     .submit-btn:hover  { opacity: .9; transform: translateY(-1px); }
     .submit-btn:active { transform: translateY(0); }
@@ -204,22 +222,22 @@
     .form-note { text-align: center; font-size: .78rem; color: var(--muted); margin-top: 10px; }
 
     /* reviews */
-    .reviews { margin-top: 18px; display: flex; flex-direction: column; gap: 10px; }
+    .reviews { margin-top: 16px; display: flex; flex-direction: column; gap: 10px; }
     .review-item {
-      background: var(--surface2); border-radius: 12px; padding: 12px 14px;
+      background: var(--surface); border-radius: 12px; padding: 12px 14px;
       display: flex; align-items: flex-start; gap: 10px;
-      border: 1px solid rgba(233,30,108,.10);
+      border: 1px solid var(--gold-border);
     }
-    .review-avatar { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; flex-shrink: 0; border: 2px solid rgba(233,30,108,.3); }
+    .review-avatar { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; flex-shrink: 0; border: 2px solid rgba(201,146,43,.4); }
     .review-header { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 3px; }
-    .review-name   { font-size: .85rem; font-weight: 700; color: var(--crimson); }
+    .review-name   { font-size: .85rem; font-weight: 700; color: var(--gold-deep); }
     .review-stars  { color: var(--gold); font-size: .82rem; }
     .review-text   { font-size: .82rem; color: var(--muted); line-height: 1.55; }
-    .review-city   { display: inline-block; margin-top: 5px; font-size: .72rem; background: #fce4ec; color: var(--crimson-mid); border-radius: 50px; padding: 1px 9px; font-weight: 700; }
+    .review-result { display: inline-block; margin-top: 5px; font-size: .72rem; background: rgba(233,30,108,.1); color: var(--pink); border-radius: 50px; padding: 2px 10px; font-weight: 700; }
 
     /* ── SECTION COMMONS ── */
-    .section-label { text-align: center; font-size: .8rem; font-weight: 700; color: var(--pink); letter-spacing: .8px; text-transform: uppercase; margin-bottom: 10px; }
-    .section-title { text-align: center; font-size: clamp(1.55rem, 3.2vw, 2.2rem); font-weight: 900; color: var(--crimson); margin-bottom: 10px; line-height: 1.3; }
+    .section-label { text-align: center; font-size: .8rem; font-weight: 700; color: var(--gold); letter-spacing: .8px; text-transform: uppercase; margin-bottom: 10px; }
+    .section-title { text-align: center; font-size: clamp(1.55rem, 3.2vw, 2.2rem); font-weight: 900; color: var(--deep); margin-bottom: 10px; line-height: 1.3; }
     .section-title .accent { color: var(--pink); }
     .section-title .gold   { color: var(--gold); }
     .section-sub { text-align: center; color: var(--muted); font-size: .95rem; margin-bottom: 44px; max-width: 540px; margin-left: auto; margin-right: auto; line-height: 1.8; }
@@ -227,103 +245,165 @@
     /* ── WHY US ── */
     .why-section { max-width: 1060px; margin: 0 auto; padding: 80px 40px 40px; }
     .why-grid {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 20px;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px;
     }
     .why-card {
       background: var(--surface); border-radius: 16px; padding: 28px 22px; text-align: center;
-      border: 1.5px solid var(--pink-border);
+      border: 1.5px solid var(--gold-border);
       transition: transform .25s, border-color .25s, box-shadow .25s;
     }
     .why-card:hover { transform: translateY(-5px); border-color: var(--pink); box-shadow: var(--shadow-lg); }
     .why-icon  { font-size: 2.2rem; margin-bottom: 12px; display: block; }
-    .why-title { font-size: 1rem; font-weight: 900; color: var(--crimson); margin-bottom: 6px; }
+    .why-title { font-size: 1rem; font-weight: 900; color: var(--deep); margin-bottom: 6px; }
     .why-desc  { font-size: .86rem; color: var(--muted); line-height: 1.7; }
+    .why-proof { display: inline-block; margin-top: 10px; font-size: .78rem; font-weight: 700; color: var(--pink); }
+
+    /* ── HOW IT WORKS ── */
+    .how-section {
+      background: var(--nav-bg);
+      padding: 72px 40px;
+    }
+    .how-inner { max-width: 900px; margin: 0 auto; }
+    .how-section .section-label { color: var(--gold-light); }
+    .how-section .section-title { color: #fff; }
+    .how-section .section-sub   { color: rgba(255,255,255,.65); margin-bottom: 48px; }
+    .how-steps {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+      position: relative;
+    }
+    .how-steps::before {
+      content: '';
+      position: absolute; top: 32px; right: 16.6%; left: 16.6%; height: 2px;
+      background: linear-gradient(90deg, var(--gold), var(--pink), var(--gold));
+      opacity: .35; pointer-events: none;
+    }
+    .how-step { text-align: center; padding: 28px 20px; }
+    .how-num {
+      width: 64px; height: 64px; border-radius: 50%;
+      background: var(--grad); color: #fff;
+      font-size: 1.4rem; font-weight: 900;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 18px; box-shadow: 0 6px 24px rgba(233,30,108,.35);
+    }
+    .how-emoji { font-size: 1.8rem; display: block; margin-bottom: 6px; }
+    .how-title { font-size: 1rem; font-weight: 900; color: #fff; margin-bottom: 8px; }
+    .how-desc  { font-size: .87rem; color: rgba(255,255,255,.65); line-height: 1.7; }
+    .how-time  { display: inline-block; margin-top: 10px; font-size: .76rem; font-weight: 700; background: rgba(233,30,108,.25); color: var(--gold-light); border-radius: 50px; padding: 3px 12px; }
 
     /* ── STATS BAND ── */
     .stats-band {
-      background: var(--grad); padding: 56px 40px; margin: 40px 0;
+      background: var(--grad); padding: 56px 40px; margin: 0;
       position: relative; overflow: hidden;
     }
     .stats-band::before {
       content: ''; position: absolute; width: 500px; height: 500px; border-radius: 50%;
-      background: rgba(255,255,255,.06); top: -200px; right: -100px;
+      background: rgba(255,255,255,.07); top: -200px; right: -100px;
     }
     .stats-inner {
       max-width: 960px; margin: 0 auto;
       display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
       gap: 30px; text-align: center; position: relative; z-index: 1;
     }
-    .stat-num   { font-size: 2.8rem; font-weight: 900; color: var(--gold-light); display: block; line-height: 1; }
-    .stat-label { font-size: .88rem; color: rgba(255,255,255,.85); margin-top: 6px; display: block; }
+    .stat-num   { font-size: 2.8rem; font-weight: 900; color: #fff; display: block; line-height: 1; }
+    .stat-label { font-size: .88rem; color: rgba(255,255,255,.82); margin-top: 6px; display: block; }
+    .stat-sub   { font-size: .72rem; color: rgba(255,255,255,.55); margin-top: 3px; display: block; }
 
     /* ── SERVICES ── */
-    .services-section { max-width: 1060px; margin: 0 auto; padding: 60px 40px 80px; }
+    .services-section { max-width: 1060px; margin: 0 auto; padding: 72px 40px 80px; }
     .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 22px; }
     .service-card {
       background: var(--surface); border-radius: 18px; overflow: hidden;
-      border: 1.5px solid var(--pink-border);
+      border: 1.5px solid var(--gold-border);
       transition: transform .25s, box-shadow .25s, border-color .25s; cursor: pointer;
     }
     .service-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); border-color: var(--pink); }
     .service-img-wrap {
-      height: 160px; background: var(--grad-soft);
+      height: 140px; background: var(--grad-soft);
       display: flex; align-items: center; justify-content: center;
       font-size: 4rem; position: relative; overflow: hidden;
+      border-bottom: 1px solid var(--gold-border);
     }
     .service-badge {
       position: absolute; top: 12px; right: 12px;
       background: var(--grad); color: #fff;
       border-radius: 50px; padding: 3px 12px; font-size: .75rem; font-weight: 700;
     }
-    .service-body  { padding: 20px; }
-    .service-name  { font-size: 1.05rem; font-weight: 900; color: var(--crimson); margin-bottom: 6px; }
-    .service-desc  { font-size: .87rem; color: var(--muted); margin-bottom: 14px; line-height: 1.65; }
+    .service-body  { padding: 18px 20px; }
+    .service-name  { font-size: 1.05rem; font-weight: 900; color: var(--deep); margin-bottom: 5px; }
+    .service-desc  { font-size: .87rem; color: var(--muted); margin-bottom: 12px; line-height: 1.65; }
     .service-footer { display: flex; align-items: center; justify-content: space-between; }
-    .service-price  { font-size: 1.2rem; font-weight: 900; color: var(--gold); }
+    .service-price  { font-size: 1.15rem; font-weight: 900; color: var(--gold); }
     .service-price span { font-size: .78rem; font-weight: 600; color: var(--muted); }
     .service-btn {
-      background: #fce4ec; color: var(--crimson-mid); border: none; border-radius: 50px;
+      background: rgba(233,30,108,.1); color: var(--pink); border: none; border-radius: 50px;
       padding: 7px 16px; font-family: 'Cairo', sans-serif; font-size: .82rem; font-weight: 700;
       cursor: pointer; transition: background .2s, color .2s; text-decoration: none;
     }
     .service-btn:hover { background: var(--pink); color: #fff; }
 
     /* ── BEFORE / AFTER ── */
-    .ba-section { background: var(--surface2); padding: 70px 40px; text-align: center; border-top: 1px solid var(--pink-border); }
+    .ba-section { background: var(--surface2); padding: 70px 40px; text-align: center; border-top: 1px solid var(--gold-border); border-bottom: 1px solid var(--gold-border); }
     .ba-inner { max-width: 960px; margin: 0 auto; }
     .ba-cards { display: flex; gap: 28px; justify-content: center; flex-wrap: wrap; margin-top: 44px; }
     .ba-card {
       background: var(--surface); border-radius: 18px; padding: 20px;
-      box-shadow: var(--shadow); border: 1.5px solid var(--pink-border);
+      box-shadow: var(--shadow); border: 1.5px solid var(--gold-border);
       flex: 1 1 240px; max-width: 270px;
     }
     .ba-label-row { display: flex; justify-content: space-between; margin-bottom: 12px; }
     .ba-lbl { font-size: .8rem; font-weight: 700; padding: 3px 12px; border-radius: 50px; }
-    .ba-lbl.before { background: #f3e5f5; color: #6a1b9a; }
-    .ba-lbl.after  { background: #fce4ec; color: var(--crimson-mid); }
+    .ba-lbl.before { background: #ede0d4; color: #7a5240; }
+    .ba-lbl.after  { background: rgba(233,30,108,.1); color: var(--pink); }
     .ba-imgs { display: flex; gap: 8px; }
     .ba-img-box {
       flex: 1; height: 120px; border-radius: 10px;
       display: flex; align-items: center; justify-content: center;
       font-size: 2.4rem; background: var(--grad-soft);
+      border: 1px solid var(--gold-border);
     }
-    .ba-title { margin-top: 14px; font-weight: 900; color: var(--crimson); font-size: .95rem; }
+    .ba-title { margin-top: 14px; font-weight: 900; color: var(--deep); font-size: .95rem; }
     .ba-sub   { font-size: .8rem; color: var(--muted); margin-top: 4px; }
+
+    /* ── GUARANTEE SECTION ── */
+    .guarantee-section { padding: 64px 40px; background: var(--cream); }
+    .guarantee-inner { max-width: 760px; margin: 0 auto; text-align: center; }
+    .guarantee-box {
+      background: var(--surface);
+      border: 2px solid var(--gold-border);
+      border-radius: 24px; padding: 40px 40px;
+      box-shadow: var(--shadow-lg);
+      position: relative; overflow: hidden;
+    }
+    .guarantee-box::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px;
+      background: var(--grad);
+    }
+    .guarantee-icon { font-size: 3.5rem; margin-bottom: 16px; display: block; }
+    .guarantee-box h3 { font-size: 1.6rem; font-weight: 900; color: var(--deep); margin-bottom: 12px; }
+    .guarantee-box h3 .g-gold { color: var(--gold); }
+    .guarantee-box p { font-size: 1rem; color: var(--muted); line-height: 1.8; max-width: 520px; margin: 0 auto 24px; }
+    .guarantee-pills { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .guarantee-pill {
+      display: flex; align-items: center; gap: 6px;
+      background: rgba(201,146,43,.1); border: 1px solid var(--gold-border);
+      border-radius: 50px; padding: 7px 16px;
+      font-size: .85rem; font-weight: 700; color: var(--gold-deep);
+    }
 
     /* ── FINAL CTA ── */
     .cta-section {
       background: var(--grad); padding: 80px 40px; text-align: center;
       position: relative; overflow: hidden;
     }
-    .cta-section::before { content: '✨'; position: absolute; font-size: 8rem; opacity: .07; top: -20px; right: 5%; pointer-events: none; }
-    .cta-section::after  { content: '💅'; position: absolute; font-size: 7rem; opacity: .07; bottom: -10px; left: 5%; pointer-events: none; }
+    .cta-section::before { content: ''; position: absolute; width: 500px; height: 500px; border-radius: 50%; background: rgba(255,255,255,.06); top: -200px; right: -100px; }
     .cta-inner { max-width: 620px; margin: 0 auto; position: relative; z-index: 1; }
-    .cta-section h2 { font-size: clamp(1.6rem, 3.5vw, 2.4rem); font-weight: 900; color: #fff; margin-bottom: 14px; }
-    .cta-section p  { color: rgba(255,255,255,.85); font-size: 1rem; margin-bottom: 34px; line-height: 1.7; }
+    .cta-section h2 { font-size: clamp(1.6rem, 3.5vw, 2.4rem); font-weight: 900; color: #fff; margin-bottom: 10px; }
+    .cta-urgency { display: inline-block; background: rgba(255,255,255,.15); border: 1px solid rgba(255,255,255,.3); border-radius: 50px; padding: 5px 18px; font-size: .82rem; font-weight: 700; color: #fff; margin-bottom: 20px; }
+    .cta-section p  { color: rgba(255,255,255,.88); font-size: 1rem; margin-bottom: 34px; line-height: 1.7; }
     .cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
     .cta-btn {
       display: inline-flex; align-items: center; gap: 10px;
-      background: #fff; color: var(--crimson);
+      background: #fff; color: var(--deep);
       font-family: 'Cairo', sans-serif; font-size: 1.05rem; font-weight: 900;
       border-radius: 50px; padding: 14px 36px; text-decoration: none;
       transition: transform .2s, box-shadow .2s; box-shadow: 0 4px 20px rgba(0,0,0,.2);
@@ -339,7 +419,7 @@
     .cta-btn-wa:hover { transform: translateY(-2px); opacity: .92; }
 
     /* ── FOOTER ── */
-    footer { background: var(--crimson); padding: 50px 40px 24px; }
+    footer { background: var(--nav-bg); padding: 50px 40px 24px; border-top: 1px solid rgba(201,146,43,.2); }
     .footer-inner { max-width: 960px; margin: 0 auto; }
     .footer-top {
       display: flex; gap: 44px; flex-wrap: wrap;
@@ -348,22 +428,22 @@
     .footer-logo-row { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
     .footer-logo-row img { width: 52px; height: 52px; border-radius: 50%; object-fit: cover; border: 2px solid var(--gold); }
     .footer-brand-name { font-size: 1.1rem; font-weight: 900; color: #fff; }
-    .footer-brand-name span { color: var(--gold); }
-    .footer-tagline { font-size: .88rem; color: rgba(255,255,255,.65); max-width: 240px; line-height: 1.6; }
-    .footer-col h4 { color: #fff; font-size: .95rem; font-weight: 700; margin-bottom: 14px; }
+    .footer-brand-name span { color: var(--gold-light); }
+    .footer-tagline { font-size: .88rem; color: rgba(255,255,255,.55); max-width: 240px; line-height: 1.6; }
+    .footer-col h4 { color: var(--gold-light); font-size: .95rem; font-weight: 700; margin-bottom: 14px; }
     .footer-col ul { list-style: none; }
-    .footer-col li { font-size: .88rem; color: rgba(255,255,255,.7); margin-bottom: 8px; }
-    .footer-contact-item { display: flex; align-items: center; gap: 9px; font-size: .88rem; color: rgba(255,255,255,.7); margin-bottom: 10px; }
-    .footer-contact-item a { color: rgba(255,255,255,.7); text-decoration: none; transition: color .2s; }
-    .footer-contact-item a:hover { color: var(--gold); }
+    .footer-col li { font-size: .88rem; color: rgba(255,255,255,.65); margin-bottom: 8px; }
+    .footer-contact-item { display: flex; align-items: center; gap: 9px; font-size: .88rem; color: rgba(255,255,255,.65); margin-bottom: 10px; }
+    .footer-contact-item a { color: rgba(255,255,255,.65); text-decoration: none; transition: color .2s; }
+    .footer-contact-item a:hover { color: var(--gold-light); }
     .footer-bottom {
-      border-top: 1px solid rgba(255,255,255,.12); padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,.1); padding-top: 20px;
       display: flex; align-items: center; justify-content: space-between;
-      flex-wrap: wrap; gap: 12px; font-size: .82rem; color: rgba(255,255,255,.5);
+      flex-wrap: wrap; gap: 12px; font-size: .82rem; color: rgba(255,255,255,.4);
     }
     .footer-tags { display: flex; flex-wrap: wrap; gap: 8px; }
-    .footer-tag { background: rgba(255,255,255,.1); color: rgba(255,255,255,.75); border-radius: 50px; padding: 3px 12px; font-size: .78rem; }
-    .footer-bottom a { color: var(--gold); text-decoration: none; }
+    .footer-tag { background: rgba(255,255,255,.07); color: rgba(255,255,255,.65); border-radius: 50px; padding: 3px 12px; font-size: .78rem; }
+    .footer-bottom a { color: var(--gold-light); text-decoration: none; }
 
     /* ── FLOATING WA ── */
     .wa-float {
@@ -377,14 +457,14 @@
     .wa-float svg { width: 30px; height: 30px; fill: #fff; }
     @keyframes pulse-wa {
       0%,100% { box-shadow: 0 4px 20px rgba(37,211,102,.45); }
-      50%      { box-shadow: 0 4px 32px rgba(37,211,102,.78); }
+      50%      { box-shadow: 0 4px 36px rgba(37,211,102,.78); }
     }
 
     /* ── TOAST ── */
     #toast {
       position: fixed; bottom: 90px; left: 50%;
       transform: translateX(-50%) translateY(20px);
-      background: var(--crimson); color: #fff;
+      background: var(--deep); color: #fff;
       padding: 12px 28px; border-radius: 50px; font-size: .9rem; font-weight: 700;
       opacity: 0; transition: opacity .35s, transform .35s;
       pointer-events: none; z-index: 300; white-space: nowrap;
@@ -399,14 +479,20 @@
       .hero-text { flex: 0 0 auto; width: 100%; }
       .hero-form-col { width: 100%; flex: 0 0 auto; }
       .why-section, .services-section { padding: 60px 16px 40px; }
+      .how-section { padding: 56px 16px; }
+      .how-steps { grid-template-columns: 1fr; gap: 16px; }
+      .how-steps::before { display: none; }
       .stats-band { padding: 48px 16px; }
       .ba-section { padding: 60px 16px; }
+      .guarantee-section { padding: 48px 16px; }
+      .guarantee-box { padding: 28px 20px; }
       .cta-section { padding: 64px 16px; }
       footer { padding: 40px 16px 20px; }
       .footer-top { gap: 28px; }
     }
     @media (max-width: 520px) {
       h1 { font-size: 1.85rem; }
+      .trust-strip { gap: 12px; }
       .services-grid { grid-template-columns: 1fr; }
       .ba-cards { flex-direction: column; align-items: center; }
       .cta-btns { flex-direction: column; align-items: center; }
@@ -438,19 +524,28 @@
     <div class="hero-text">
       <div class="badge">
         <span class="badge-dot"></span>
-        🇲🇦 صالون تجميل نسائي احترافي
+        👑 +500 عميلة راضية في المغرب
       </div>
+
       <h1>
-        جمالك يستحق<br>
-        <span class="accent">أفضل</span> عناية<br>
-        <span class="gold">في المغرب</span>
+        تحولي إلى <span class="gold">أميرة</span><br>
+        من <span class="accent">أول جلسة</span><br>
+        — مضمون 100%
       </h1>
+
       <p class="hero-sub">
-        خدمات تجميل احترافية للمرأة — كوافور، بروتين الشعر، عناية بالبشرة، مكياج، أظافر وحمام مغربي أصيل. بأيدي خبيرات متخصصات.
+        شعر ناعم كالحرير، بشرة مضيئة، وإطلالة تتحدث عن نفسها. بأيدي خبيرات متخصصات ومنتجات عالمية فاخرة — بدون مغامرة، بدون خسارة.
       </p>
-      <div class="motivation-box">
-        <span class="icon">👑</span>
-        <p>نستخدم <strong>أفضل المنتجات العالمية</strong> لضمان نتائج مذهلة من أول جلسة — لأن جمالك لا يقبل المساومة.</p>
+
+      <div class="trust-strip">
+        <div class="trust-item">⭐ <strong>5.0</strong> / تقييم العميلات</div>
+        <div class="trust-item">⚡ <strong>نتيجة من أول جلسة</strong></div>
+        <div class="trust-item">🔒 <strong>ضمان الرضا 100%</strong></div>
+      </div>
+
+      <div class="guarantee-mini">
+        <span class="icon">✨</span>
+        <p>نستخدم <strong>أفضل المنتجات العالمية</strong> ونضمن النتيجة — إذا لم تعجبك إطلالتك، نعيد العمل مجاناً بدون أسئلة.</p>
       </div>
     </div>
 
@@ -460,6 +555,10 @@
         <div class="form-card-top">
           <h2>✨ احجزي موعدك الآن</h2>
           <p>مجاناً · بدون التزام · رد خلال دقائق</p>
+        </div>
+        <div class="scarcity-bar">
+          <span class="scarcity-dot"></span>
+          <span>المواعيد المتاحة هذا الأسبوع: محدودة</span>
         </div>
         <div class="form-card-body">
           <form id="bookingForm" novalidate>
@@ -491,10 +590,10 @@
             </div>
             <input type="hidden" name="service" id="fservice" value="طلب حجز - Maison Beauty Shehrazade" />
             <button type="submit" class="submit-btn" id="submitBtn">
-              احجزي الآن — مجاناً 🌸
+              احجزي الآن — نتصل بك فوراً 🌸
             </button>
           </form>
-          <p class="form-note">🔒 معلوماتك سرية ومحمية — لن نشاركها مع أي جهة</p>
+          <p class="form-note">🔒 سرية تامة · إلغاء مجاني · لا رسوم مسبقة</p>
         </div>
       </div>
 
@@ -507,8 +606,8 @@
               <span class="review-name">نادية ب.</span>
               <span class="review-stars">⭐⭐⭐⭐⭐</span>
             </div>
-            <p class="review-text">بروتين الشعر مزيان بزاف، شعري ولا ناعم وطويل من أول جلسة 🥹</p>
-            <span class="review-city">📍 عميلة وفية</span>
+            <p class="review-text">بروتين الشعر غيّر حياتي — شعري ناعم ولامع من أول جلسة وماش نتخيل 🥹</p>
+            <span class="review-result">✅ نتيجة من أول جلسة</span>
           </div>
         </div>
         <div class="review-item">
@@ -518,8 +617,8 @@
               <span class="review-name">سارة م.</span>
               <span class="review-stars">⭐⭐⭐⭐⭐</span>
             </div>
-            <p class="review-text">مكياج العروس كان فوق الكلام، كل الضيوف مدحوني 💕 شكراً Shehrazade!</p>
-            <span class="review-city">📍 مكياج عروس</span>
+            <p class="review-text">مكياج العروس كان فوق الكلام، كل الضيوف سألوني أين تجملت 💕</p>
+            <span class="review-result">✅ مكياج عروس</span>
           </div>
         </div>
         <div class="review-item">
@@ -529,8 +628,8 @@
               <span class="review-name">هند الع.</span>
               <span class="review-stars">⭐⭐⭐⭐⭐</span>
             </div>
-            <p class="review-text">الحمام المغربي والعناية بالبشرة خرجت كأني ولدت من جديد ✨ نوصي بيهم بجوج يدين!</p>
-            <span class="review-city">📍 حمام مغربي</span>
+            <p class="review-text">الحمام المغربي خرجت كأني ولدت من جديد ✨ بشرة ناعمة بزاف!</p>
+            <span class="review-result">✅ حمام مغربي</span>
           </div>
         </div>
       </div>
@@ -539,42 +638,94 @@
   </div>
 </section>
 
-<!-- WHY US -->
-<section class="why-section">
-  <div class="section-label">لماذا Maison Beauty Shehrazade؟</div>
-  <h2 class="section-title">كل ما تحتاجيه<br>في <span class="accent">مكان واحد</span></h2>
-  <p class="section-sub">خبرة + جودة + أسعار معقولة — هذا هو وعدنا لك كل يوم</p>
-  <div class="why-grid">
-    <div class="why-card">
-      <span class="why-icon">👑</span>
-      <div class="why-title">خبيرات متخصصات</div>
-      <div class="why-desc">فريق من أفضل الخبيرات المتخصصات في التجميل والعناية بالمرأة — بتجربة سنوات</div>
+<!-- STATS BAND -->
+<section class="stats-band">
+  <div class="stats-inner">
+    <div>
+      <span class="stat-num">+500</span>
+      <span class="stat-label">عميلة راضية</span>
+      <span class="stat-sub">والعدد يتزايد كل أسبوع</span>
     </div>
-    <div class="why-card">
-      <span class="why-icon">⚡</span>
-      <div class="why-title">نتيجة فورية</div>
-      <div class="why-desc">ستلاحظين الفرق من أول جلسة — شعر ناعم وبشرة مضيئة بدون انتظار</div>
+    <div>
+      <span class="stat-num">5+</span>
+      <span class="stat-label">سنوات خبرة</span>
+      <span class="stat-sub">في التجميل الاحترافي</span>
     </div>
-    <div class="why-card">
-      <span class="why-icon">🏆</span>
-      <div class="why-title">منتجات عالمية</div>
-      <div class="why-desc">نستخدم فقط أفضل الماركات العالمية لنتائج تدوم وتجربة فاخرة</div>
+    <div>
+      <span class="stat-num">10+</span>
+      <span class="stat-label">خدمة متخصصة</span>
+      <span class="stat-sub">تحت سقف واحد</span>
     </div>
-    <div class="why-card">
-      <span class="why-icon">💝</span>
-      <div class="why-title">أجواء مريحة</div>
-      <div class="why-desc">فضاء أنيق ومريح خصيصاً للمرأة — تجربة تجميل كاملة تشعرك بالأميرة</div>
+    <div>
+      <span class="stat-num">5★</span>
+      <span class="stat-label">تقييم العميلات</span>
+      <span class="stat-sub">دون استثناء</span>
     </div>
   </div>
 </section>
 
-<!-- STATS BAND -->
-<section class="stats-band">
-  <div class="stats-inner">
-    <div><span class="stat-num">+500</span><span class="stat-label">عميلة راضية</span></div>
-    <div><span class="stat-num">5+</span><span class="stat-label">سنوات خبرة</span></div>
-    <div><span class="stat-num">10+</span><span class="stat-label">خدمة متخصصة</span></div>
-    <div><span class="stat-num">5★</span><span class="stat-label">تقييم العميلات</span></div>
+<!-- WHY US -->
+<section class="why-section">
+  <div class="section-label">لماذا Maison Beauty Shehrazade؟</div>
+  <h2 class="section-title">لماذا اختارتنا<br><span class="gold">+500 عميلة</span>؟</h2>
+  <p class="section-sub">ليس فقط لأننا نجمّل — بل لأننا نضمن النتيجة ونجعلك تشعرين بالفرق فعلاً</p>
+  <div class="why-grid">
+    <div class="why-card">
+      <span class="why-icon">⚡</span>
+      <div class="why-title">نتيجة فورية مضمونة</div>
+      <div class="why-desc">ستلاحظين الفرق من أول جلسة — شعر ناعم وبشرة مضيئة بدون انتظار أسابيع</div>
+      <span class="why-proof">100% عميلاتنا لاحظن الفرق فوراً</span>
+    </div>
+    <div class="why-card">
+      <span class="why-icon">👑</span>
+      <div class="why-title">خبيرات متخصصات</div>
+      <div class="why-desc">فريق من أفضل الخبيرات بتجربة سنوات — كل خبيرة متخصصة في مجالها</div>
+      <span class="why-proof">5+ سنوات خبرة في التجميل</span>
+    </div>
+    <div class="why-card">
+      <span class="why-icon">🏆</span>
+      <div class="why-title">منتجات عالمية فقط</div>
+      <div class="why-desc">نستخدم فقط أفضل الماركات العالمية — لا تنازل في الجودة، لا تجارب على شعرك</div>
+      <span class="why-proof">ماركات معتمدة دولياً</span>
+    </div>
+    <div class="why-card">
+      <span class="why-icon">💝</span>
+      <div class="why-title">فضاء خاص للمرأة</div>
+      <div class="why-desc">أجواء مريحة وأنيقة خصيصاً للمرأة — تجربة تجميل كاملة تشعرك بالأميرة</div>
+      <span class="why-proof">خصوصية 100% مضمونة</span>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how-section">
+  <div class="how-inner">
+    <div class="section-label">الحجز سهل وسريع</div>
+    <h2 class="section-title">3 خطوات فقط<br>للإطلالة الأميرية</h2>
+    <p class="section-sub">لا تعقيد، لا وقت ضائع — نحن نهتم بكل شيء، أنتِ فقط تحضرين وتستمتعين</p>
+    <div class="how-steps">
+      <div class="how-step">
+        <div class="how-num">1</div>
+        <span class="how-emoji">📝</span>
+        <div class="how-title">احجزي في 30 ثانية</div>
+        <div class="how-desc">املئ النموذج باسمك ورقم الواتساب واختاري الخدمة — بدون تعقيد</div>
+        <span class="how-time">⏱ 30 ثانية فقط</span>
+      </div>
+      <div class="how-step">
+        <div class="how-num">2</div>
+        <span class="how-emoji">📞</span>
+        <div class="how-title">نتصل بك فوراً</div>
+        <div class="how-desc">فريقنا يتواصل معك عبر الواتساب لتأكيد الموعد المناسب لك تماماً</div>
+        <span class="how-time">⏱ رد خلال دقائق</span>
+      </div>
+      <div class="how-step">
+        <div class="how-num">3</div>
+        <span class="how-emoji">👑</span>
+        <div class="how-title">تعالي واستمتعي</div>
+        <div class="how-desc">خبيراتنا يهتمن بكل التفاصيل — أنتِ فقط اسرتاحي وتمتعي بتجربة ملكية</div>
+        <span class="how-time">✨ نتيجة مضمونة</span>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -582,7 +733,7 @@
 <section class="services-section">
   <div class="section-label">خدماتنا</div>
   <h2 class="section-title">اكتشفي <span class="accent">خدماتنا</span></h2>
-  <p class="section-sub">من الكوافور إلى الحمام المغربي — نغطي كل احتياجاتك الجمالية باحترافية عالية</p>
+  <p class="section-sub">من الكوافور إلى الحمام المغربي — كل ما تحتاجيه في مكان واحد، باحترافية عالية</p>
   <div class="services-grid">
 
     <div class="service-card" onclick="scrollToForm('بروتين الشعر')">
@@ -592,9 +743,9 @@
       </div>
       <div class="service-body">
         <div class="service-name">بروتين الشعر</div>
-        <div class="service-desc">نعومة ولمعان من أول جلسة — بأفضل المنتجات لحماية شعرك وإعادة حيويته.</div>
+        <div class="service-desc">نعومة ولمعان من أول جلسة — شعر ناعم كالحرير يدوم أشهر بأفضل المنتجات.</div>
         <div class="service-footer">
-          <div class="service-price">على حسب<span> الطول</span></div>
+          <div class="service-price">حسب الطول<span></span></div>
           <a class="service-btn" href="#leadForm">احجزي ←</a>
         </div>
       </div>
@@ -604,7 +755,7 @@
       <div class="service-img-wrap"><span>✂️</span></div>
       <div class="service-body">
         <div class="service-name">كوافور وتصفيف</div>
-        <div class="service-desc">قصات عصرية، بلوواوت، تسريحات مناسبات — يدي خبيرة تحول شعرك.</div>
+        <div class="service-desc">قصات عصرية، بلوواوت، تسريحات مناسبات — يدي خبيرة تحول شعرك تماماً.</div>
         <div class="service-footer">
           <div class="service-price">حسب الطلب</div>
           <a class="service-btn" href="#leadForm">احجزي ←</a>
@@ -619,7 +770,7 @@
       </div>
       <div class="service-body">
         <div class="service-name">مكياج احترافي</div>
-        <div class="service-desc">مكياج يومي، سهرات أو عروس — بريق طبيعي أو إطلالة درامية، الاختيار لك.</div>
+        <div class="service-desc">سهرات، مناسبات أو عروس — إطلالة مضيئة أو درامية، الاختيار لك دائماً.</div>
         <div class="service-footer">
           <div class="service-price">من 150 DH</div>
           <a class="service-btn" href="#leadForm">احجزي ←</a>
@@ -631,7 +782,7 @@
       <div class="service-img-wrap"><span>💅</span></div>
       <div class="service-body">
         <div class="service-name">أظافر وناخن آرت</div>
-        <div class="service-desc">مانيكير، بديكير، جيل، وأشكال ناخن آرت أنيقة — أيدي وأقدام مثالية.</div>
+        <div class="service-desc">مانيكير، بديكير، جيل، وأشكال ناخن آرت أنيقة — أيدي وأقدام مثالية لكل مناسبة.</div>
         <div class="service-footer">
           <div class="service-price">من 80 DH</div>
           <a class="service-btn" href="#leadForm">احجزي ←</a>
@@ -646,7 +797,7 @@
       </div>
       <div class="service-body">
         <div class="service-name">حمام مغربي</div>
-        <div class="service-desc">تقشير بالصابون البلدي، غاسول وزيت الأرغان — تجربة تجديد كاملة للجسم والروح.</div>
+        <div class="service-desc">تقشير بالصابون البلدي، غاسول وزيت الأرغان — تجديد كامل للجسم والروح.</div>
         <div class="service-footer">
           <div class="service-price">من 200 DH</div>
           <a class="service-btn" href="#leadForm">احجزي ←</a>
@@ -658,7 +809,7 @@
       <div class="service-img-wrap"><span>🌸</span></div>
       <div class="service-body">
         <div class="service-name">استشارة مجانية</div>
-        <div class="service-desc">مش عارفة من أين تبدئي؟ احجزي استشارة مجانية مع خبيرتنا ونحددوا برنامجك معاً.</div>
+        <div class="service-desc">مش عارفة من أين تبدئي؟ احجزي استشارة مجانية ونحددوا برنامجك الجمالي معاً.</div>
         <div class="service-footer">
           <div class="service-price">مجاناً 🎁</div>
           <a class="service-btn" href="#leadForm">احجزي ←</a>
@@ -674,25 +825,45 @@
   <div class="ba-inner">
     <div class="section-label">نتائج حقيقية</div>
     <h2 class="section-title">قبل وبعد — <span class="accent">الفرق واضح</span></h2>
-    <p class="section-sub">نتائج عميلاتنا تتكلم عن نفسها — جمالك في أيدٍ أمينة ومتخصصة</p>
+    <p class="section-sub">عميلاتنا يتكلمن عن نفسهن — جمالك في أيدٍ أمينة ومتخصصة</p>
     <div class="ba-cards">
       <div class="ba-card">
         <div class="ba-label-row"><span class="ba-lbl before">قبل</span><span class="ba-lbl after">بعد</span></div>
         <div class="ba-imgs"><div class="ba-img-box">🌀</div><div class="ba-img-box">✨</div></div>
         <div class="ba-title">بروتين الشعر</div>
-        <div class="ba-sub">من الشعر المجعد إلى ناعم كالحرير</div>
+        <div class="ba-sub">من الشعر المجعد إلى ناعم كالحرير — من أول جلسة</div>
       </div>
       <div class="ba-card">
         <div class="ba-label-row"><span class="ba-lbl before">قبل</span><span class="ba-lbl after">بعد</span></div>
         <div class="ba-imgs"><div class="ba-img-box">😐</div><div class="ba-img-box">🌟</div></div>
         <div class="ba-title">مكياج احترافي</div>
-        <div class="ba-sub">إطلالة مضيئة وجذابة من أول لمسة</div>
+        <div class="ba-sub">إطلالة مضيئة وجذابة من أول لمسة خبيرتنا</div>
       </div>
       <div class="ba-card">
         <div class="ba-label-row"><span class="ba-lbl before">قبل</span><span class="ba-lbl after">بعد</span></div>
         <div class="ba-imgs"><div class="ba-img-box">💭</div><div class="ba-img-box">💎</div></div>
         <div class="ba-title">حمام مغربي</div>
-        <div class="ba-sub">جلد ناعم ومتجدد كأنك ولدت من جديد</div>
+        <div class="ba-sub">جلد ناعم ومتجدد كأنك ولدت من جديد — 100%</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GUARANTEE -->
+<section class="guarantee-section">
+  <div class="guarantee-inner">
+    <div class="guarantee-box">
+      <span class="guarantee-icon">🛡️</span>
+      <h3>ضمان الرضا <span class="g-gold">100%</span></h3>
+      <p>
+        إذا لم تعجبك النتيجة بعد جلستك، نعيد العمل مجاناً بدون أي أسئلة.
+        نحن واثقون من جودة خدمتنا لأن <strong>+500 عميلة خرجت راضية تماماً</strong> — وأنتِ ستكونين التالية.
+      </p>
+      <div class="guarantee-pills">
+        <div class="guarantee-pill">✅ بدون مخاطرة</div>
+        <div class="guarantee-pill">✅ إلغاء مجاني</div>
+        <div class="guarantee-pill">✅ لا رسوم مسبقة</div>
+        <div class="guarantee-pill">✅ رضاك أولاً دائماً</div>
       </div>
     </div>
   </div>
@@ -701,8 +872,9 @@
 <!-- FINAL CTA -->
 <section class="cta-section">
   <div class="cta-inner">
-    <h2>مستنياش — احجزي موعدك اليوم 🌸</h2>
-    <p>المواعيد محدودة وتمتلئ بسرعة. احجزي الآن وضمني مكانك مع خبيرتك المفضلة.</p>
+    <span class="cta-urgency">⚡ المواعيد تمتلئ بسرعة هذا الأسبوع</span>
+    <h2>اخرجي أميرة اليوم 🌸</h2>
+    <p>لا تنتظري — كل يوم تأخيري يوم بدون الإطلالة التي تستحقينها. احجزي الآن وضمني مكانك.</p>
     <div class="cta-btns">
       <a href="#leadForm" class="cta-btn">✨ احجزي موعدك مجاناً</a>
       <a href="https://wa.me/212711113246" class="cta-btn-wa" target="_blank">
@@ -723,7 +895,7 @@
           <img src="logo.png" alt="Maison Beauty Shehrazade" />
           <div class="footer-brand-name">Maison Beauty <span>Shehrazade</span></div>
         </div>
-        <p class="footer-tagline">صالون تجميل نسائي احترافي — خبيرات في خدمتك</p>
+        <p class="footer-tagline">صالون تجميل نسائي احترافي — نتيجة مضمونة من أول جلسة</p>
       </div>
 
       <div class="footer-col">
@@ -846,7 +1018,7 @@
     });
   }, { threshold: 0.10 });
 
-  document.querySelectorAll('.why-card, .service-card, .ba-card, .review-item').forEach(el => {
+  document.querySelectorAll('.why-card, .service-card, .ba-card, .review-item, .how-step').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(26px)';
     el.style.transition = 'opacity .5s ease, transform .5s ease';
